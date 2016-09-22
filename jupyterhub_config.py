@@ -11,7 +11,7 @@ c.DockerSpawner.network_name = os.environ['SPAWNER_NETWORK']
 c.DockerSpawner.use_internal_ip = True
 c.DockerSpawner.remove_containers = True
 c.DockerSpawner.container_image =  os.environ['SPAWNER_IMAGE']
-c.DockerSpawner.volumes = {os.environ['SPAWNER_HOST_VOLUME']: {'bind': '/jupyter': 'mode': 'rw'}}
+c.DockerSpawner.volumes = {os.environ['SPAWNER_HOST_VOLUME']: {'bind': '/jupyter', 'mode': 'rw'}}
 c.DockerSpawner.hub_ip_connect = os.environ['JUPYTERHUB_IP']
 
 # The docker instances need access to the Hub, so the default loopback port doesn't work:
