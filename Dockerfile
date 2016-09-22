@@ -9,4 +9,4 @@ EXPOSE 8000
 
 LABEL org.jupyter.service="jupyterhub"
 
-CMD ["jupyterhub", "-f jupyterhub_config.py", "--no-ssl"]
+CMD ["jupyterhub", "-f /srv/jupyterhub/jupyterhub_config.py", "--no-ssl"]
